@@ -260,6 +260,15 @@ font-weight: 400;
  }
 
  /**contacto**/
+
+ .error{
+    background-color: var(--gris);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--negro);
+   font-weight: bold;
+ }
+
  .contacto-bg{
     background-image: url(img/contacto.jpg);
     height: 40rem;
