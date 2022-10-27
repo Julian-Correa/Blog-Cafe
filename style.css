@@ -261,6 +261,15 @@ font-weight: 400;
 
  /**contacto**/
 
+ .validacion{
+    background-color: #00ff00;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--blanco);
+   font-weight: bold;
+
+ }
+
  .error{
     background-color: var(--gris);
     text-align: center;

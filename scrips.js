@@ -51,17 +51,25 @@ if(nombre ==='' || email===''|| mensaje==='' ) {
 
     mostrarError('todos los campos son obligatorios');
 
-    return;  //corta con la funcion si se cumple con la condicion
+    return   //corta con la funcion si se cumple con la condicion
 };
 
 
-console.log('enviando Formulario');
+// if (nombre !== ''|| email !== '' || mensaje!=='') {
+
+//     validacionAceptada('se ha enviado el formualrio');
+
+//     return;
+// }
+
+validacionAceptada('se ha enviado el formualrio');
+
 });
 
 function mostrarError(mensaje) { 
 
     const error = document.createElement('P');
-    error.textContent= mensaje;
+    error.textContent = mensaje;
     error.classList.add('error');
 
     formulario.appendChild(error);
@@ -71,6 +79,20 @@ function mostrarError(mensaje) {
         error.remove()
     }, 3000);
 
+ };
+
+ function validacionAceptada(mensaje) {
+
+    const validacion = document.createElement('P')
+    validacion.textContent= mensaje;
+    validacion.classList.add('validacion');
+
+    formulario.appendChild(validacion);
+
+     //desaparecer despues de 3 segundos 
+     setTimeout(() =>{
+        validacion.remove()
+    }, 3000);
  };
 
 
