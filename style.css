@@ -261,8 +261,8 @@ font-weight: 400;
 
  /**contacto**/
 
- .validacion{
-    background-color: #00ff00;
+ .correcto{
+    background-color: #2ECC71;
     text-align: center;
     text-transform: uppercase;
     color: var(--blanco);
@@ -271,10 +271,10 @@ font-weight: 400;
  }
 
  .error{
-    background-color: var(--gris);
+    background-color: #E74C3C ;
     text-align: center;
     text-transform: uppercase;
-    color: var(--negro);
+    color: var(--blanco);
    font-weight: bold;
  }
 

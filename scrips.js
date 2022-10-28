@@ -49,51 +49,35 @@ console.log(mensaje);
 
 if(nombre ==='' || email===''|| mensaje==='' ) { 
 
-    mostrarError('todos los campos son obligatorios');
+    mostrarAlerta('todos los campos son obligatorios', true);
 
     return   //corta con la funcion si se cumple con la condicion
 };
 
 
-// if (nombre !== ''|| email !== '' || mensaje!=='') {
 
-//     validacionAceptada('se ha enviado el formualrio');
-
-//     return;
-// }
-
-validacionAceptada('se ha enviado el formualrio');
+mostrarAlerta('se ha enviado el formualrio');
 
 });
 
-function mostrarError(mensaje) { 
+function mostrarAlerta(mensaje,error = null) {
+    const alerta = document.createElement('P');
+    alerta.textContent = mensaje;
 
-    const error = document.createElement('P');
-    error.textContent = mensaje;
-    error.classList.add('error');
+    if(error) {
+        alerta.classList.add('error');
+    } else {
+        alerta.classList.add('correcto');
+    }
 
-    formulario.appendChild(error);
+    formulario.appendChild(alerta);
 
     //desaparecer despues de 3 segundos 
-    setTimeout(() =>{
-        error.remove()
+    setTimeout(() => {
+        alerta.remove()
     }, 3000);
+}
 
- };
-
- function validacionAceptada(mensaje) {
-
-    const validacion = document.createElement('P')
-    validacion.textContent= mensaje;
-    validacion.classList.add('validacion');
-
-    formulario.appendChild(validacion);
-
-     //desaparecer despues de 3 segundos 
-     setTimeout(() =>{
-        validacion.remove()
-    }, 3000);
- };
 
 
 function leerTexto(evento){
